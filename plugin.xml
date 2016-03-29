@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-supersonicads-mediation-vungle" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-supersonicads-mediation-vungle</name>
+    <description>Add support for Vungle in supersonic ads mediation platform for a Cordova app</description>
+
+    <engines>
+        <engine name="cordova-android" version=">=4.0.0" />
+        <engine name="cordova-plugman" version=">=4.2.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.vungle.publisher.FullScreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        </config-file>
+
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/dagger-1.2.2.jar" target-dir="libs/" />
+        <source-file src="src/android/javax.inject-1.jar" target-dir="libs/" />
+        <source-file src="src/android/nineoldandroids-2.4.0.jar" target-dir="libs/" />
+        <source-file src="src/android/support-v4-18.0.0.jar" target-dir="libs/" />
+    </platform>
+</plugin>

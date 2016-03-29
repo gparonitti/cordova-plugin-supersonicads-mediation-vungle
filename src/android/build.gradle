@@ -1,0 +1,11 @@
+repositories {
+	maven {
+		url "https://dl.bintray.com/supersonic/android-adapters"
+	}
+}
+
+cdvPluginPostBuildExtras.add({
+	dependencies {
+	    compile 'com.supersonic.adapters:vungleadapter:1.1.8@jar'
+	}
+});
