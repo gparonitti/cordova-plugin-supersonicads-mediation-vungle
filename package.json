@@ -1,20 +1,19 @@
 {
   "name": "cordova-plugin-supersonicads-mediation-vungle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add support for Vungle in supersonic ads mediation platform for a Cordova app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SeVeNDuS/cordova-plugin-supersonicads-mediation-vungle.git"
+    "url": "https://github.com/gparonitti/cordova-plugin-supersonicads-mediation-vungle.git"
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios"
+    "cordova-android"
   ],
-  "author": "SeVeNDuS",
+  "author": "Gianluca Paronitti",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/blakgeek/cordova-plugin-supersonicads-mediation-vungle/issues"
+    "url": "https://github.com/gparonitti/cordova-plugin-supersonicads-mediation-vungle/issues"
   },
-  "homepage": "https://github.com/blakgeek/cordova-plugin-supersonicads-mediation-vungle"
+  "homepage": "https://github.com/gparonitti/cordova-plugin-supersonicads-mediation-vungle"
 }

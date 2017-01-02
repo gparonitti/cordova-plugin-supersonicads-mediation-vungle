@@ -6,6 +6,9 @@ repositories {
 
 cdvPluginPostBuildExtras.add({
 	dependencies {
-	    compile 'com.supersonic.adapters:vungleadapter:1.1.8@jar'
+        compile 'com.supersonic.adapters:vungleadapter:2.1.2@jar'
+        compile 'com.google.dagger:dagger:2.7'
+        compile 'javax.inject:javax.inject:1'
+        compile 'com.google.android.gms:play-services-location:8.4.0'
 	}
-});
+})

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-supersonicads-mediation-vungle" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="cordova-plugin-supersonicads-mediation-vungle" version="0.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-plugin-supersonicads-mediation-vungle</name>
     <description>Add support for Vungle in supersonic ads mediation platform for a Cordova app</description>
@@ -10,8 +10,17 @@
     </engines>
 
     <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="com.vungle.publisher.FullScreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            <activity android:name="com.vungle.publisher.VideoFullScreenAdActivity"
+                      android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+                      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            <activity android:name="com.vungle.publisher.MraidFullScreenAdActivity"
+                      android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+                      android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
         </config-file>
 
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
